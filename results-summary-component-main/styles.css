@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+*{
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+body {
+    background-color: grey;
+}
+
+section {
+    width: 100%;
+}
+
+.container {
+    margin-inline: auto;
+	width: min(80%, 40rem);		
+}
+
+
+.split {
+    display: flex;
+    flex-direction: column;
+}
+
+.left {
+    text-align: center;    
+    color: white;
+    background-color: hsla(256, 72%, 46%, 1);
+}
+
+.left , .right {
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+.left p, .left h2, .right h2 {    
+    margin: 0;
+}
+
+.left p, .left h2 {
+opacity: .7;
+}
+
+
+.left > *, .right > * {
+    margin: 2rem auto;
+}
+
+.right {
+    background-color: white;
+}
+
+
+.circle {    
+    text-align: center;
+    width: 12rem;
+    height: 12rem;
+    display: flex;    
+    justify-content: space-around;
+    
+    border-radius: 10000px;
+    background-color: hsl(241, 81%, 54%);
+}
+
+.circle > * {
+    margin: auto 0;
+}
+
+.circle span {
+     margin: auto 0;
+    font-size:5rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+ul li {
+    margin: 1rem 0;
+    padding: .8rem;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    background-color: whitesmoke;
+    border-radius: 50px;
+}
+
+ul li div {
+    display: flex;    
+}
+
+ul li span {
+    color: grey;
+}
+
+svg {
+    margin-right: .7rem;
+}
+
+.red {
+    color: hsl(0, 100%, 67%);
+}
+
+.orange {
+    color: hsl(39, 100%, 56%);
+}
+
+.green {
+    color: hsl(166, 100%, 37%);
+}
+
+.blue {
+    color: hsl(234, 85%, 45%);
+}
+
+button {
+    font-size: 1.2rem;
+    color: white;    
+    background-color: grey;
+    border: none;
+    padding: .5rem 5rem;
+    border-radius: 50px;
+}
+
+
+button:hover {
+    transition: all .3s ease;
+    cursor: pointer;
+    background-color: hsl(241, 81%, 54%);
+}
+
+
+@media screen and (min-width: 50rem) { 
+    .split {
+        flex-direction: row;   
+    }
+
+    .split > * {
+        flex-basis: 100%;          
+    }
+
+}
