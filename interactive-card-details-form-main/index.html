@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <!-- 
+  0000 0000 0000 0000
+  Jane Appleseed
+  00/00
+
+  000
+
+  CVC
+
+  Confirm
+ -->    <main>
+    <div class="bg"><img src="images/bg-main-desktop.png" alt=""></div>
+          <div class="content-grid">
+              <div class="cards">
+                <div class="front-card">                 
+                  <img class="card-bg" src="images/bg-card-front.png" alt="">
+                  <svg width="84" class="card-logo" height="47" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff"/><path d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z" stroke="#fff"/></svg>
+                  <span class="card-number">0000 0000 0000 0000</span>                  
+                  <span class="card-name">Jane Appleseed</span>
+                  <span class="card-expiry-date">00/00</span>                  
+                </div> 
+                
+                <div class="back-card">
+                  <img class="back-card-bg" src="images/bg-card-back.png" alt="">
+                  <span class="card-cvc">000</span>
+                </div>
+            </div> 
+            
+            <form class="form" action="#">
+                <fieldset>
+                  <legend>Cardholder Name</legend>
+                  <input class="form-name" placeholder="e.g. Jane Appleseed"  type="text">
+                </fieldset>
+          
+                <fieldset class="form-number">
+                  <span class="warning">Wrong format, numbers only</span>
+                  <legend>Card Number</legend>
+                  <input  placeholder="e.g. 1234 5678 9123 0000"  type="text">
+                </fieldset>
+          
+                <fieldset class="field">
+                  <legend>
+                  Exp. Date (MM/YY)
+                  </legend> 
+                  <span class="warning">Can't be blank</span>
+                  <span class="warning">Can't be blank</span>
+                         <input  maxlength = "2" class="mm" placeholder="MM" type="number"><input  maxlength = "2" class="yy" placeholder="YY" type="number"><span class="cvc"><input 
+                          maxlength = "3"  placeholder="e.g. 123" type="number"></span> 
+                   
+                </fieldset>
+              <input type="submit"  value="Confirm">
+            </form>            
+        </div>
+      </main>        
+</body>
+<script src="main.js" ></script>
+</html>
