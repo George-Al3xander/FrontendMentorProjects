@@ -1,0 +1,287 @@
+/* Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+    all: unset;
+    display: revert;
+  }
+ 
+  /* Preferred box-sizing value */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  /*
+    Remove list styles (bullets/numbers)
+    in case you use it with normalize.css
+  */
+  ol, ul {
+    list-style: none;
+  }
+  
+  /* For images to not be able to exceed their container */
+  img {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* Removes spacing between cells in tables */
+  table {
+    border-collapse: collapse;
+  }
+  
+  /* Revert the 'white-space' property for textarea elements on Safari */
+  textarea {
+    white-space: revert;
+  }
+
+  
+
+  :root {
+    --fs-default: 1rem;
+    --fs-medium: calc(var(--fs-default) * 1.25);
+    --fs-big: calc(var(--fs-default) * 1.5);
+    --fs-large: calc(var(--fs-default) * 2);
+
+    --clr-primary: hsl(171, 66%, 44%);
+    --clr-secondary: hsl(233, 100%, 69%);
+    --clr-font-dark: hsl(210, 10%, 33%);
+    --clr-font-light: hsl(201, 11%, 66%);
+
+    --padding-average: 2rem;
+    --padding-large: calc(var(--padding-average) * 2);
+
+  }
+
+
+  * {
+    font-family: 'Bai Jamjuree', sans-serif;
+  }
+
+
+  section, header, footer {    
+    width: 100%;
+  }
+
+  header {
+    padding-block: 6rem;
+    text-align: center;
+  }
+
+  footer {
+    background-color: lightgrey;
+  }
+
+  .container, .small-container {
+    display: grid;
+    justify-items: center;
+  }
+
+  .small-container img {
+    margin-block: 1rem;
+  }
+
+  .container {    
+    gap: var(--padding-average);
+    margin-inline: auto;
+    width: min(80%, 70rem);
+  }
+
+  .split {
+    display: flex;
+    flex-direction: column;  
+    gap: 1rem;  
+  }
+
+   .split > * {
+      margin: 1rem;
+   }
+
+  #bg {
+    position: absolute;
+    max-width: 100%;
+  }
+  
+  button {
+      color: white;
+      font-size: var(--fs-medium);   
+      padding: 1rem 3rem;  
+      border-radius: 1000vw; 
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      white-space: nowrap;
+  }
+
+  button:hover {
+    cursor: pointer;
+    opacity: .7;
+  }
+
+  .buttons :nth-child(1) {    
+    background-color: var(--clr-primary);
+  }
+
+  .buttons :nth-child(2) {    
+    background-color: var(--clr-secondary);
+  }
+
+  h1, h2 {
+    font-weight: 700;
+    text-align: center;
+    color: var(--clr-font-dark);       
+  }
+
+  h1 {
+    font-size: var(--fs-large); 
+  }
+
+  h2 {
+    font-size: var(--fs-big); 
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: var(--clr-font-light);
+    line-height: 1.5em;
+    text-align: center;
+  }
+
+  section, .icons1 > * {
+    margin-block:3rem;
+       
+  }
+
+  .block > * {
+    margin-block: 3rem;
+  }
+
+  .icons {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .icons > * {
+    margin: 1rem;
+    flex-basis: 100%;
+    min-width: 20px;
+  }
+
+  .logo {
+    width: min-content;
+  }
+
+  .logo img{
+    margin: 0;
+    width:50px;
+  }
+
+
+  .footer2 {
+    display: grid;
+    justify-items: center;  
+    align-items: center;  
+  }
+  
+  .footer-ul {
+    color: var(--clr-font-light);
+    font-size: var(--fs-medium);
+    text-align: center;   
+    white-space: nowrap; 
+    word-spacing: .3rem;
+  }
+
+  .footer-ul > *{
+    margin-block: 1rem;
+  }
+
+  .footer-ul > *:hover {
+    cursor: pointer;
+    color: var(--clr-primary);
+  }
+
+  
+
+  .f {
+    grid-area: faq;
+  }
+
+  .cu {
+    grid-area: contact;
+  }
+  
+  .pp {
+    grid-area: policy;
+  }
+
+  .pk {
+    grid-area: kit;
+    align-self: start;
+  }
+
+  .ig {
+    grid-area: guide;
+  }
+
+  
+
+  @media (min-width: 54.375rem) {    
+
+    .footer2 {
+      display: flex;
+    }
+    .split {
+        flex-direction: row;
+    }
+
+    .split > * {
+        flex-basis: 100%;
+      }
+
+    .footer {
+      justify-items: stretch ;
+    }
+
+
+      .block p {
+        text-align: left;
+      }
+
+      .block h2 {
+        text-align: left;
+      }
+
+      .block-absolute {
+        width: min-content;
+        min-width: 40rem;  
+        min-height: 37.5rem;      
+      }
+
+      .img-absolute {
+        position: absolute;
+        left: -5%;
+      }
+
+      .absolute {
+        width: min(80%, 70rem) !important;        
+      }
+
+      .footer-ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-column-gap: 2rem;
+      grid-template-areas:
+      "faq policy guide"
+      "contact kit kit"
+    ;
+  }
+
+  .footer-ul {
+    font-size: var(--fs-default);
+    text-align: left;
+    
+  }
+
+      
+
+  }
+
+  
