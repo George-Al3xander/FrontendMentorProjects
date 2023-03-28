@@ -1,0 +1,165 @@
+/*** The new CSS Reset - version 1.2.0 (last updated 23.7.2021) ***/
+
+/* Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+    all: unset;
+    display: revert;
+  }
+  
+  /* Preferred box-sizing value */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  /*
+    Remove list styles (bullets/numbers)
+    in case you use it with normalize.css
+  */
+  ol, ul {
+    list-style: none;
+  }
+  
+  /* For images to not be able to exceed their container */
+  img {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* Removes spacing between cells in tables */
+  table {
+    border-collapse: collapse;
+  }
+  
+  /* Revert the 'white-space' property for textarea elements on Safari */
+  textarea {
+    white-space: revert;
+  }
+
+:root {
+    --clr-primary: hsl(257, 40%, 49%);
+    --clr-secondary: hsl(300, 69%, 71%);
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url("images/bg-mobile.svg");    
+    background-repeat: no-repeat;
+    background-color: var(--clr-primary);
+    padding-block: 2rem;
+    color: white;
+    text-align: center;
+}
+
+
+
+header, main, footer {
+    width: 100%;
+   
+}
+
+header, main {
+    margin-bottom: 3rem;
+}
+
+header {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.container {
+    margin-inline: auto;
+    width: min(85%, 80rem);
+}
+
+.split {
+    display: flex;
+    flex-direction: column;    
+}
+
+
+h1 {
+    font-weight: 600;    
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    
+}
+
+p {
+    font-weight: 400;
+    margin-bottom: 1rem;
+    opacity: .7;
+
+
+}
+
+footer .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;    
+    
+}
+
+footer svg {
+    border: 1px solid white;
+    padding: .2rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    fill:white;
+    margin: .3rem;    
+}
+
+footer svg:hover{
+    cursor: pointer;
+    fill:var(--clr-secondary);
+    border: 1px solid var(--clr-secondary);
+    transition: all .5s ease;
+
+}
+
+button {
+    background-color: white;
+    color: var(--clr-secondary);
+    padding: 1rem 5rem;
+    border-radius: 50px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--clr-secondary);
+    color:  white; 
+    transition: all .5s ease;
+}
+
+
+@media (min-width: 60rem) {
+    body {
+        text-align: left;
+    }
+    .split {
+        flex-direction: row;
+    }
+
+    .split > * {
+        flex-basis: 100%;
+        margin-inline: 1rem;
+    }
+
+    .split1 {
+        flex-basis: 200%;
+    }
+
+    footer .container {        
+        justify-content: flex-end;    
+        
+    }
+
+    .split2 {
+        margin-top: 2rem;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+}
