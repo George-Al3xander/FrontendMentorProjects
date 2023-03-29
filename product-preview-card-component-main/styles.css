@@ -1,0 +1,173 @@
+/*** The new CSS Reset - version 1.2.0 (last updated 23.7.2021) ***/
+
+/* Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+    all: unset;
+    display: revert;
+  }
+  
+  /* Preferred box-sizing value */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  /*
+    Remove list styles (bullets/numbers)
+    in case you use it with normalize.css
+  */
+  ol, ul {
+    list-style: none;
+  }
+  
+  /* For images to not be able to exceed their container */
+  img {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* Removes spacing between cells in tables */
+  table {
+    border-collapse: collapse;
+  }
+  
+  /* Revert the 'white-space' property for textarea elements on Safari */
+  textarea {
+    white-space: revert;
+  }
+
+:root {
+    --clr-primary: hsl(158, 36%, 37%);
+    --clr-accent: hsl(30, 38%, 92%);
+
+
+    --fs-default: 0.875rem;
+    --ff-default: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: var(--ff-default);
+    background-color: lightgrey;
+    padding: 5%;
+}
+main {
+    width: 100%;
+    line-height: 1.5;
+}
+
+.container {
+    margin-inline: auto;
+    width:min(80%, 62.5rem);
+}
+
+.split {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--clr-accent);
+}
+
+.card-info h1,.card-info span {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.card-info h3, .card-info p {
+    font-weight: 200;
+    opacity: .7;
+}
+
+.card-info h3 {
+    letter-spacing: .3rem;
+    font-size: var(--fs-default)
+
+}
+
+.card-info p {
+    font-size: var(--fs-default)
+}
+
+
+
+.card-info > *{
+    margin-bottom:.6rem;
+}
+
+.card-info span {    
+    font-size: 2rem;
+    color: var(--clr-primary);
+    position: relative;
+}
+
+.card-info span::after {
+    content: "$169.99";
+    color: grey;
+    font-size: .4em;
+    text-decoration: line-through;
+    margin-left: 1rem;
+    position: absolute;
+    top: 20%;
+    font-weight: 200;
+}
+
+.card-info button {
+    color: white;
+    background-color: var(--clr-primary);
+    padding: 1rem 3rem;
+    border-radius: 20px;
+    width: 100%;
+    display: grid;
+    text-align: center;
+}
+
+.card-info button svg {
+    margin-right: .5rem;
+}
+
+.container img {
+    border-radius: 20px 20px 0 0;
+
+}
+
+.card-info {
+    border-radius: 0 0 20px 20px;
+}
+
+#img-desktop {
+    display: none;
+}
+
+@media (min-width: 50rem) {
+    .split {
+        flex-direction: row;
+    }
+
+    .split > *{
+        flex-basis: 100%;
+    }
+
+    #img-desktop {
+        display: block;
+    }
+
+    #img-mobile {
+        display: none;
+    }
+
+    .container img {
+        border-radius: 20px 0 0 20px;
+    
+    }
+    
+    .card-info {
+        border-radius: 0  20px 20px 0;        
+    }
+}
