@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+ 
+</head>
+<body>
+  <header>
+      <div class="block"><div><img src="images/logo.svg" alt=""></div><nav class="item-desc">
+        <ul class="block">
+          <li id="feature">Features<svg id="arrow-down-feature" width="10" height="6" xmlns="http://www.w3.org/2000/svg"><path stroke="#686868" stroke-width="1.5" fill="none" d="m1 1 4 4 4-4"/></svg><svg id="arrow-up-feature" width="10" height="6" xmlns="http://www.w3.org/2000/svg"><path stroke="#686868" stroke-width="1.5" fill="none" d="m1 5 4-4 4 4"/></svg></li>
+          <span id="span-feature" class="hidden">
+            <ul>
+              <li><img src="images/icon-todo.svg" alt=""> Todo List</li>
+              <li><img src="images/icon-calendar.svg" alt="">Calendar</li>
+              <li><img src="images/icon-reminders.svg" alt="">Reminders</li>
+              <li><img src="images/icon-planning.svg" alt="">Planning</li>
+            </ul>
+          </span>
+          <li id="company">Company<svg id="arrow-down-company" width="10" height="6" xmlns="http://www.w3.org/2000/svg"><path stroke="#686868" stroke-width="1.5" fill="none" d="m1 1 4 4 4-4"/></svg><svg id="arrow-up-company" width="10" height="6" xmlns="http://www.w3.org/2000/svg"><path stroke="#686868" stroke-width="1.5" fill="none" d="m1 5 4-4 4 4"/></svg></li>
+          <span id="span-company" class="hidden">
+            <ul>
+              <li>History</li>
+              <li>Our team</li>
+              <li>Blog</li>
+            </ul>
+          </span>
+          <li>Careers</li>
+          <li>About</li>
+        </ul>
+      </nav></div>
+      <img onclick="showMenu()"  class="item-mobile" src="images/icon-menu.svg" alt=""> 
+      
+
+      <nav class="sign item-desc">
+        <ul class="block">
+          <li>Login</li>
+          <li>Register</li>
+        </ul>        
+      </nav>
+  </header>
+  
+  <div class="mobile-menu">
+    <nav>
+      <img onclick="hideMenu()" src="images/icon-close-menu.svg" alt="">
+      <ul class="block">
+        <li onclick="showFeature()" id="feature">Features<svg id="arrow-down-feature-mobile" width="10" height="6" xmlns="http://www.w3.org/2000/svg"><path stroke="#686868" stroke-width="1.5" fill="none" d="m1 1 4 4 4-4"/></svg><svg id="arrow-up-feature-mobile" width="10" height="6" xmlns="http://www.w3.org/2000/svg"><path stroke="#686868" stroke-width="1.5" fill="none" d="m1 5 4-4 4 4"/></svg></li>
+        <span id="span-feature-mobile" class="hidden">
+          <ul>
+            <li><img src="images/icon-todo.svg" alt=""> Todo List</li>
+            <li><img src="images/icon-calendar.svg" alt="">Calendar</li>
+            <li><img src="images/icon-reminders.svg" alt="">Reminders</li>
+            <li><img src="images/icon-planning.svg" alt="">Planning</li>
+          </ul>
+        </span>
+        <li onclick="showCompany()" id="company">Company<svg id="arrow-down-company-mobile" width="10" height="6" xmlns="http://www.w3.org/2000/svg"><path stroke="#686868" stroke-width="1.5" fill="none" d="m1 1 4 4 4-4"/></svg><svg id="arrow-up-company-mobile" width="10" height="6" xmlns="http://www.w3.org/2000/svg"><path stroke="#686868" stroke-width="1.5" fill="none" d="m1 5 4-4 4 4"/></svg></li>
+        <span id="span-company-mobile" class="hidden">
+          <ul>
+            <li>History</li>
+            <li>Our team</li>
+            <li>Blog</li>
+          </ul>
+        </span>
+        <li>Careers</li>
+        <li>About</li>
+      </ul>
+      <ul class="block sign">
+        <li>Login</li>
+        <li>Register</li>
+      </ul>        
+    </nav>   
+    
+    
+    
+    
+  </div>
+
+  <aside>
+    <img  class=" item-mobile" src="images/image-hero-mobile.png" alt="">
+    <img  class=" item-desc" src="images/image-hero-desktop.png" alt="">    
+  </aside>
+  <main>
+    <h1>Make remote work</h1>  
+    <p>Get your team in sync, no matter your location. Streamline processes, 
+      create team rituals, and watch productivity soar.</p>
+    <button>Learn more</button>
+    <div class="pics">
+      <div><img src="images/client-databiz.svg" alt=""></div>
+      <div><img src="images/client-audiophile.svg" alt=""></div>    
+      <div><img src="images/client-meet.svg" alt=""></div>    
+      <div><img src="images/client-maker.svg" alt=""></div>            
+    </div>
+
+  </main>
+  
+
+
+  <!-- 
+  
+  
+ 
+
+  Login
+
+
+  
+
+   -->
+
+  
+  <script src="index.js" ></script>
+ 
+</body>
+</html>
